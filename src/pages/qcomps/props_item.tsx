@@ -1,11 +1,17 @@
 import { ItemProps } from "@/types/item";
 
-function Item({ name, isPacked } : ItemProps) {
-  return (
-    <li className="item">
-      {name}
-    </li>
-  );
+function Strikethrough({ text }: { text: string }) {
+    return (
+        <del>{text}</del>
+    );
+}
+
+function Item({ name, isPacked }: ItemProps) {
+    return (
+        <li>
+            {isPacked ? <Strikethrough text={name} /> : name}
+        </li>
+    );
 }
 
 export default function PackingList() {
