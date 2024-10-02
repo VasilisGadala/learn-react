@@ -7,7 +7,7 @@ export default function Counter() {
     <>
       <h1>{number}</h1>
       <button onClick={() => {
-        setNumber(number + 1);
+        setNumber(number + 1); // see difference between this and queueUpdates
         setNumber(number + 1);
         setNumber(number + 1);
       }}>+3</button>

@@ -10,7 +10,13 @@
 // import PackingList from "@/pages/qcomps/props_item"
 // import Gallery from "@/pages/qcomps/gallery_props"
 // import List from "@/pages/qcomps/list_keys_id"
-import RecipeList from "@/pages/qcomps/recipes"
+// import RecipeList from "@/pages/qcomps/recipes"
+// import Gallery from './qcomps/state'
+// import Form from './qcomps/stuckForm'
+// import FeedbackForm from './qcomps/thankYouCrash'
+// import Counter from './components/snapshot'
+import Form from './components/snapshot2'
+
 
 export default function Home() {
   return (
@@ -20,6 +26,10 @@ export default function Home() {
       // <PackingList />
       // <Gallery />
       // <List />
-      <RecipeList />
+      // <RecipeList />
+      // <Gallery />
+      // <Form />
+      // <FeedbackForm />
+      <Form />
   )
 }
