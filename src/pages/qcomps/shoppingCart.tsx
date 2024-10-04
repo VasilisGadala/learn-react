@@ -5,10 +5,16 @@ export default function RequestTracker() {
   const [completed, setCompleted] = useState(0);
 
   async function handleClick() {
-    setPending(pending + 1);
+    setPending((n) => n + 1);
     await delay(3000);
-    setPending(pending - 1);
-    setCompleted(completed + 1);
+    // in this case the snapshot is taken immediately after the button press,
+    // it doesn't car about the delay (maybe if we used .then()) it would
+    // after 3 seconds: pending = 0, completed = 0
+    // so pending -> -1, completed = 1
+    // after 4 seconds: pending = 1, completed - 1
+    // so pending -> 0, completed = 1
+    setPending((n) => n - 1);
+    setCompleted((n) => n + 1);
   }
 
   return (
